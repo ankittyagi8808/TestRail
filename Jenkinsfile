@@ -11,5 +11,10 @@ pipeline {
         archiveArtifacts(allowEmptyArchive: true, artifacts: 'tes')
       }
     }
+    stage('test2') {
+      steps {
+        build 'mvn test'
+      }
+    }
   }
 }
